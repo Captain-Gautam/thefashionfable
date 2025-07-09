@@ -1,0 +1,153 @@
+/* About Page Layout */
+.about-page {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-family: "Estonia", cursive;
+  font-size: 2.15rem;
+}
+
+.round-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+.introduction p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.vision-mission {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.vision, .mission {
+  flex: 1 1 300px;
+  background-color: #f5f5f5;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 16px #3a2c4711;
+  font-family: 'Poppins', 'Playfair Display', sans-serif;
+  font-size: 1.15rem;
+}
+
+.vision h3, .mission h3 {
+  font-family: "Estonia", cursive;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px);}
+  to   { opacity: 1; transform: translateX(0);}
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px);}
+  to   { opacity: 1; transform: translateX(0);}
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+
+.designer-photo {
+  animation: fadeInLeft 0.8s;
+}
+.introduction {
+  animation: fadeInRight 0.8s;
+}
+.vision {
+  animation: fadeInUp 0.9s 0.2s backwards;
+  background: linear-gradient(120deg, #e0b3ff22 0%, #ffb34722 100%);
+  border-left: 6px solid #e0b3ff;
+}
+.mission {
+  animation: fadeInUp 0.9s 0.5s backwards;
+  background: linear-gradient(120deg, #ffb34722 0%, #e0b3ff22 100%);
+  border-left: 6px solid #ffb347;
+}
+
+/* Responsive */
+@media (min-width: 800px) {
+  .about-main-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .designer-photo {
+    flex: 0 0 220px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .introduction {
+    flex: 1;
+    text-align: left;
+  }
+}
+
+@media (max-width: 799px) {
+  .about-main-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .designer-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .introduction {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-page {
+    padding: 18px 2vw;
+    gap: 18px;
+  }
+  .round-photo {
+    width: 100px;
+    height: 100px;
+  }
+  .vision, .mission {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+.about-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url('../assets/images/bg.jpg') no-repeat center center;
+  background-size: cover;
+  filter: blur(14px) brightness(0.7);
+  opacity: 1;
+  pointer-events: none;
+}
+
+.about-page > * {
+  position: relative;
+  z-index: 1;
+}

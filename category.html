@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Category | The Fashion Fable</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/collections.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="category-modal" id="category-modal">
+    <div class="category-header-bar">
+      <h2 class="category-heading" id="category-title"></h2>
+      <button class="close-category" id="close-category" title="Back to Collections">&times;</button>
+    </div>
+    <div class="category-gallery" id="category-gallery">
+      <!-- Images will be injected here -->
+    </div>
+  </div>
+
+  <!-- Fullscreen Image Viewer -->
+  <div id="fullscreen-viewer" class="fullscreen-viewer">
+    <span class="close-btn" id="close-fullscreen">&times;</span>
+    <span class="fullscreen-title" id="fullscreen-title"></span>
+    <img id="fullscreen-img" src="" alt="Full Image" />
+    <span class="arrow left-arrow" id="prev-img">&#8592;</span>
+    <span class="arrow right-arrow" id="next-img">&#8594;</span>
+  </div>
+
+  <script src="js/category.js"></script>
+</body>
+</html>

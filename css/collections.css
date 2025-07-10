@@ -16,7 +16,8 @@
 }
 
 .category-btn {
-  font-size: 2rem; /* 2rem * 1.2 = 2.4rem */
+  font-size: 0.5rem;
+  font-family: "EB Garamond", serif;
   padding: 0;
   width: 180px;
   height: 180px;
@@ -235,7 +236,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     margin: 12px auto 18px auto;
-    padding: 0 2vw;
+    padding: 0 15vw;
   }
   .category-img {
     width: 90vw;
@@ -285,7 +286,7 @@
 .category-img,
 .category-gallery,
 .image-display {
-  font-family: "Estonia", cursive;
-  font-size: 1.15rem;
+  font-family: "EB Garamond", serif; /*"Estonia", cursive; */
+  font-size: 1rem;
 }
 

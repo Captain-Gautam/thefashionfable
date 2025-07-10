@@ -676,3 +676,98 @@ html, body {
     font-size: 1rem;
   }
 }
+
+/* Mobile Hero Content Styles - Single Poster Image */
+.mobile-hero-content {
+  display: none;
+  text-align: center;
+  padding: 1.5rem 1.5rem 2.5rem;
+  background: linear-gradient(135deg, #ffe0ec 0%, #e0f7fa 100%);
+  position: relative;
+}
+
+.mobile-hero-content h1 {
+  font-family: 'Kaushan Script', cursive;
+  margin-bottom: 0.5rem;
+  color: #ffb347;
+  font-size: 2.2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 2;
+}
+
+.mobile-hero-content p {
+  margin-bottom: 1.5rem;
+  color: #740d81;
+  position: relative;
+  z-index: 2;
+}
+
+.featured-poster {
+  width: 100%;
+  max-width: 320px;
+  margin: 1rem auto 1.5rem;
+  border-radius: 12px;
+  border: 3px solid #e0b3ff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  display: block;
+  position: relative;
+  z-index: 2;
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.featured-poster:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.poster-frame {
+  position: relative;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.poster-frame::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 40px;
+  height: 20px;
+  background: linear-gradient(90deg, #e0b3ff 0%, #ffb347 100%);
+  border-radius: 5px;
+  transform: translateX(-50%) rotate(-5deg);
+  z-index: 1;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.mobile-cta-btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  background: linear-gradient(90deg, #e0b3ff 0%, #ffb347 100%);
+  color: #232526;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(224,179,255,0.3);
+  transition: all 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.mobile-cta-btn:hover {
+  background: linear-gradient(90deg, #ffb347 0%, #e0b3ff 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(224,179,255,0.4);
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .mobile-hero-content {
+    display: block;
+  }
+  
+  .hero.transparent-hero {
+    display: none; /* Hide the desktop hero section */
+  }
+}
